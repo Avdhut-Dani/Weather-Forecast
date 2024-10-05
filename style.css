@@ -3,15 +3,60 @@
     padding: 0;
 }
 body{
-    background: #0b131e;
+    /* background-image: url(pexels-pixabay-414102.jpg);*/
+    background-color: #95cff4;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
-h1{
-    color: white;
-    width: 100%;
-    padding: 18px 0;
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px); /* Blurred background effect */
+}
+
+.navbar h1 {
+    color: #fff;
     font-size: 1.75rem;
-    text-align: center;
-    background: #202b3b;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #95cff4; /* Hover color */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on small screens */
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
 }
 .container{
     display: flex;
@@ -29,30 +74,30 @@ h1{
     margin: 10px 0 20px 0;
     font-size: 1.07rem;
     border-radius: 4px;
-    background-color: #6c757d;
-    border: 1px solid #6c757d;
+    backdrop-filter: blur(100px);
+    border: none;
 }
 .weather-input input::placeholder{
-    color: white;
+    color: black;
 }
 input, select, textarea{
-    color: white;
+    color: black;
 }
 .weather-input .seperator{
     height: 1px;
     width: 100%;
     margin: 25px 0;
-    background: #bbb;
+    background-color: #5c8ead;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .weather-input .seperator::before{
     content: "or";
-    color: white;
+    color: black;
     font-size: 1.18rem;
     padding: 0 15px;
-    background: #0b131e;
+    background-color: #95cff4;
     margin: -4px;
 
 }
@@ -74,33 +119,13 @@ input, select, textarea{
     width: 100%;
 }
 .current-weather{
-    color: #fff;
+    color: black;
     display: flex;
     border-radius: 5px;
     padding: 20px 70px 20px 20px;
-    background: #202b3b;
+    background-color: #5c8ead;
     justify-content: space-between;
     position: relative;
-}
-.current-weather::after, .current-weather::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-    /* background-image: conic-gradient(from var(--angle), transparent 50%, blue); */
-
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 2px;
-    border-radius: 5px;
-    animation: 3s spin linear infinite;
-}
-.current-weather::before{
-    filter: blur(1.5rem);
-    opacity: 0.5;
 }
 .current-weather h2{
     font-size: 1.7rem;
@@ -130,45 +155,13 @@ input, select, textarea{
     gap: 50px;
 }
 .weather-cards .card{
-    background: #202b3b;
+    background-color: #5c8ead;
     list-style: none;
     color: white;
     padding: 18px 16px;
     border-radius: 5px;
     width: calc(100% / 5);
     position: relative;
-}
-@property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-
-}
-.weather-cards .card::after, .weather-cards .card::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 50%, blue);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 2px;
-    border-radius: 5px;
-    animation: 3s spin linear infinite;
-}
-.weather-cards .card::before{
-    filter: blur(1.5rem);
-    opacity: 0.5;
-}
-@keyframes spin{
-    from{
-        --angle: 0deg;
-    }
-    to{
-        --angle: 360deg;
-    }
 }
 .weather-cards .card img{
     max-width: 70px;

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="x-icon" href="clouds-and-sun.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Project Javascript | Avdhut</title>
     <link rel="stylesheet" href="style.css">
@@ -10,10 +12,21 @@
 
 </head>
 <body>
-    <h1>Weather Dashboard</h1>
+    <body>
+        <nav class="navbar">
+            <h1><i class="fa-solid fa-cloud-sun"></i>&nbsp; &nbsp;Weather Dashboard</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="https://openweathermap.org/">Forecast</a></li>
+                <li><a href="https://dribbble.com/tags/weather-website">Theme</a></li>
+                <li><a href="https://about_me.html">Contact</a></li>
+            </ul>
+        </nav>
+    </body>
+    
     <div class="container">
         <div class="weather-input">
-            <h3 style="color: white;">Enter a city name</h3>
+            <h3>Enter a city name</h3>
             <input class="city-input" type="text" placeholder="E.g., New York, London, Tokyo">
             <button class="search-btn">Search</button>
             <div class="seperator"></div>
@@ -33,7 +46,7 @@
                 </div>
             </div>
             <div class="days-forecast">
-                <h2 style="color: white">5 Days forecast</h2>
+                <h2>3 Days Forecast</h2>
                 <ul class="weather-cards">
                     <li class="card">
                         <h3>(2024-10-01)</h3>
