@@ -1,2 +1,2 @@
 # Weather-Forecast
-My first attempt to create a fully functional website using HTML, CSS and JavaScript.
+Second try to make a beautiful, functional and fully independent website.
